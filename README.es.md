@@ -20,7 +20,7 @@ Esta página está organizada de la siguiente manera:
 ## **Repositorios**
 
 - Repositorios Angular
-  - [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList "To-Do app project") [Vista Previa](https://stefanonotaro-angularrepositories.github.io/ToDoList/)
+  - [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList "To-Do app project") - [Vista Previa](https://stefanonotaro-angularrepositories.github.io/ToDoList/)
 
 ### **Contacto**
 
