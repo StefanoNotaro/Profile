@@ -1,4 +1,4 @@
-Language: [English](/README.md "English") - [Spanish](/README.es.md "Spanish")
+Language: [English](/README.md "English") - [Spanish](/README.es.md "Spanish") - [Spanish](./README.es.md "Spanish")
 # Welcome to Stefano Notaro profile page
 
 The purpose of this profile is to guide you to my differents repositories in github.
