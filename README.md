@@ -4,16 +4,12 @@ The purpose of this profile is to guide you to my differents repositories in git
 
 ## **Oranizations**
 
-```
  - [Angular Repositories](https://github.com/StefanoNotaro-AngularRepositories "Angular Repositories")
-```
 
 ## **Repositories**
 
-```
  - Angular Repositories
   - [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList "To-Do app project")
-```
 
 ### **Contact**
 
