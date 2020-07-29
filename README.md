@@ -1,70 +1,27 @@
-<html lang="{{ site.lang | default: " en-US " }}">
+Language: [English](/README.md) - [Spanish](/README.es.md) - [TEST](/Test.md)
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"> {% seo %}
-</head>
+# Welcome to Stefano Notaro profile page
 
-<body>
+The purpose of this profile is to guide you to my differents repositories in github.
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-            <h1 id="project_title">
-                <a class="title-style" href="https://github.com/StefanoNotaro">{{ site.title | default: site.github.repository_name }}</a>
-            </h1>
-            <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+This page is organized as follow:  
+ On the first section are all my github's organizations. There I have all the repositories from the same technology.  
+ Ex: In "Angular Repositories" you will see all my Angular repositories, with a link to get into the organization.
 
-            {% if site.show_downloads %}
-            <section id="downloads">
-                <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-                <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-            {% endif %}
-            {% if site.show_cv_download %}
-            <section>
-                <a class="cv_download_link" href="sources/CVFile.pdf">Download CV</a>
-            </section>
-            {% endif %}
-        </header>
-    </div>
+Then you have the "Repositories" section.  
+ Here is a direct link to the repositories. This ones are organized by organization.
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-        <section id="main_content" class="inner">
-            {{ content }}
-        </section>
-    </div>
+And finally my mail contact.
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
-            {% if site.github.is_project_page %}
-            <p class="copyright">Site maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-            {% endif %}
-        </footer>
-    </div>
+## **Oranizations**
 
-    {% if site.google_analytics %}
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-    {% endif %}
+-   [Angular Repositories](https://github.com/StefanoNotaro-AngularRepositories 'Angular Repositories')
 
-</body>
+## **Repositories**
 
-</html>
+-   Angular Repositories
+    -   [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList 'To-Do app project') - [Preview Page](https://stefanonotaro-angularrepositories.github.io/ToDoList/)
+
+### **Contact**
+
+Mail: stefano.notaro@gmail.com
