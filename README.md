@@ -1,4 +1,3 @@
-Languages: [English](https://stefanonotaro.github.io/Profile/) - [Spanish](https://stefanonotaro.github.io/Profile/README.es.md)
 # Welcome to Stefano Notaro profile page
 
 The purpose of this profile is to guide you to my differents repositories in github.
