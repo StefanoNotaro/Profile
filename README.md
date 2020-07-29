@@ -1,6 +1,3 @@
----
-layout: default
----
 Language: [English](https://stefanonotaro.github.io/Profile/) - [Spanish](/README.es.md)
 
 # Welcome to Stefano Notaro profile page
