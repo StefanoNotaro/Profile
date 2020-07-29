@@ -1,4 +1,4 @@
-Language: [Ingles](https://stefanonotaro.github.io/Profile/) - [Español](/README.es.md)
+Lenguaje: [Ingles](https://stefanonotaro.github.io/Profile/) - [Español](/README.es.md)
 
 # Bienvenido al perfil de Stefano Notaro
 
