@@ -1,8 +1,11 @@
 ---
 ---
-
 @import '{{ site.theme }}';
 .title-style {
     text-decoration: none;
     color: #fff;
+}
+
+.title-style:hover {
+    text-decoration: none;
 }
