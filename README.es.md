@@ -1,4 +1,5 @@
-Lenguaje: [Ingles](/README.md "Ingles") - [Español](/README.es.md "Español")
+Language: [Ingles](https://stefanonotaro.github.io/Profile/) - [Español](/README.es.md)
+
 # Bienvenido al perfil de Stefano Notaro
 
 El proposito de este perfil es guiarte mediante mis diferentes repositorios en github.
