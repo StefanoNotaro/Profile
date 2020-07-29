@@ -1,4 +1,4 @@
-Language: [English](/README.md) - [Spanish](/README.es.md) - [TEST](/Test.md)
+Language: [English](/README.md) - [Spanish](/README.es.md)
 
 # Welcome to Stefano Notaro profile page
 
