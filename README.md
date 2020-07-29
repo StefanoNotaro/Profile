@@ -9,7 +9,7 @@ The purpose of this profile is to guide you to my differents repositories in git
 ## **Repositories**
 
 - Angular Repositories
- - [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList "To-Do app project")
+  - [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList "To-Do app project")
 
 ### **Contact**
 
