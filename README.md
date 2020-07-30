@@ -1,27 +1,27 @@
-Language: [English](/README.md) - [Spanish](/README.es.md)
+# Profile
 
-# Welcome to Stefano Notaro profile page
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-The purpose of this profile is to guide you to my differents repositories in github.
+## Development server
 
-This page is organized as follow:  
- On the first section are all my github's organizations. There I have all the repositories from the same technology.  
- Ex: In "Angular Repositories" you will see all my Angular repositories, with a link to get into the organization.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Then you have the "Repositories" section.  
- Here is a direct link to the repositories. This ones are organized by organization.
+## Code scaffolding
 
-And finally my mail contact.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## **Oranizations**
+## Build
 
--   [Angular Repositories](https://github.com/StefanoNotaro-AngularRepositories 'Angular Repositories')
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## **Repositories**
+## Running unit tests
 
--   Angular Repositories
-    -   [ToDoList](https://github.com/StefanoNotaro-AngularRepositories/ToDoList 'To-Do app project') - [Preview Page](https://stefanonotaro-angularrepositories.github.io/ToDoList/)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### **Contact**
+## Running end-to-end tests
 
-Mail: stefano.notaro@gmail.com
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
