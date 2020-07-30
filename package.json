@@ -9,7 +9,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "ghBuild": "ng build --prod --base-href \"https://StefanoNotaro.github.io/Profile/\"",
-        "gh Deploy": "npx angular-cli-ghpages --dir=dist/Profile"
+        "ghDeploy": "npx angular-cli-ghpages --dir=dist/Profile"
     },
     "private": true,
     "dependencies": {
@@ -21,11 +21,19 @@
         "@angular/platform-browser": "~8.2.14",
         "@angular/platform-browser-dynamic": "~8.2.14",
         "@angular/router": "~8.2.14",
+        "@fortawesome/fontawesome-free": "^5.14.0",
+        "@types/underscore": "^1.10.17",
+        "angular-bootstrap-md": "^8.10.1",
+        "animate.css": "^4.1.0",
         "bootstrap": "^4.5.0",
+        "chart.js": "^2.9.3",
+        "hammerjs": "^2.0.8",
         "jquery": "^3.5.1",
+        "mdbootstrap": "^4.19.1",
         "popper.js": "^1.16.1",
         "rxjs": "~6.4.0",
         "tslib": "^1.10.0",
+        "underscore": "^1.10.2",
         "zone.js": "~0.9.1"
     },
     "devDependencies": {
