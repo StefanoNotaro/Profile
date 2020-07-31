@@ -3,46 +3,46 @@
 <p>The purpose of this profile is to guide you to my differents repositories in github.</p>
 
 <p>
-  This page is organized as follow:<br />
-  On the first section are all my github’s organizations. There I have all the repositories from the same technology.<br />
-  Ex: In “Angular Repositories” you will see all my Angular repositories, with a link to get into the organization.
+    This page is organized as follow:<br /> On the first section are all my github’s organizations. There I have all the repositories from the same technology.<br /> Ex: In “Angular Repositories” you will see all my Angular repositories, with a link to
+    get into the organization.
 </p>
 
 <p>
-  Then you have the “Repositories” section.<br />
-  Here is a direct link to the repositories. This ones are organized by organization.
+    Then you have the “Repositories” section.<br /> Here is a direct link to the repositories. This ones are organized by organization.
 </p>
 
 <h2 id="oranizations">
-  <strong>Organizations</strong><small>({{ dataGroupedSanitized.length }})</small>
+    <strong>Organizations</strong><small>({{ dataGroupedSanitized.length }})</small>
 </h2>
 
 <ul>
-  <li *ngFor="let organization of dataGroupedSanitized">
-    <a [href]="organization.organizationUrl">{{ organization.organizationName }}</a>
-  </li>
+    <li *ngFor="let organization of getOrganizations(dataGroupedSanitized)">
+        <a *ngIf="organization.organizationUrl != ''" [href]="organization.organizationUrl">{{ organization.organizationName }}</a>
+    </li>
 </ul>
 
 <h2 id="repositories"><strong>Repositories</strong></h2>
 
 <div class="accordion" id="accordionExample">
-  <div class="card" *ngFor="let d of dataGroupedSanitized">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h5>
-            {{ d.organizationName }} <small>({{ d.repositories.length }})</small>
-          </h5>
-        </button>
-      </h2>
-    </div>
+    <div class="card" *ngFor="let d of dataGroupedSanitized">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+                    <h5>
+                        {{ d.organizationName }} <small>({{ d.repositories.length }})</small>
+                    </h5>
+                </button>
+            </h2>
+        </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <ul class="list-group">
-        <li class="list-group-item" *ngFor="let repository of d.repositories">
-          <a [href]="repository.repositoryUrl">{{ repository.repositoryName }}</a> - <a [href]="repository.gitHubPage">Preview Page</a>
-        </li>
-      </ul>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let repository of d.repositories">
+                    <a [href]="repository.repositoryUrl">{{ repository.repositoryName }}</a> -
+                    <a *ngIf="repository.hasPages" [href]="repository.gitHubPage"> Preview Page</a>
+                    <a *ngIf="!repository.hasPages"> Preview Not Available</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </div>

@@ -1,11 +1,12 @@
 export interface Organization {
-  organizationName: string;
-  organizationUrl: string;
-  repositories: Repository[];
+    organizationName: string;
+    organizationUrl: string;
+    repositories: Repository[];
 }
 
 export interface Repository {
-  repositoryName: string;
-  repositoryUrl: string;
-  gitHubPage: string;
+    repositoryName: string;
+    repositoryUrl: string;
+    gitHubPage: string;
+    hasPages: boolean;
 }
