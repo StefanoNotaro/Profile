@@ -1,0 +1,14 @@
+.lang-select {
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    cursor: pointer;
+    enable-background: accumulate;
+}
+
+select option {
+    color: black;
+    background-color: transparent;
+}

@@ -7,10 +7,9 @@
             </button> -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto"></ul>
-                <i class="ae flag"></i>
-                <select class="selectpicker" data-width="fit" (change)="languageChange($event)">
-                    <option value="en" data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-                    <option value="es" data-content='<span class="flag-icon flag-icon-es"></span> Español'>Español</option>
+                <select class="selectpicker lang-select" data-width="fit" (change)="languageChange($event)">
+                    <option class="lang-option" value="en">English</option>
+                    <option class="lang-option" value="es">Español</option>
                 </select>
             </div>
         </nav>
