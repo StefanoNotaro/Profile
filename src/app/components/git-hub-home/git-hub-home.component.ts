@@ -17,6 +17,7 @@ import { Globals } from '../../globals';
     providers: [Globals],
 })
 export class GitHubHomeComponent implements OnInit {
+    public isLoading: boolean;
     private userName = 'StefanoNotaro';
     public data = [];
     public dataGroupByOrganization: Dictionary<any[]>;
@@ -24,7 +25,15 @@ export class GitHubHomeComponent implements OnInit {
     public pageTranslations;
     private documentTranslation = 'gitHubHome';
 
-    constructor(private _gitOrganizatinosServices: OrganizationsService, private _gitRepositoriesServices: RepositoriesService, private _genericService: GenericService, private _translationsService: TranslationsService, public _globals: Globals) {}
+    constructor(
+        private _gitOrganizatinosServices: OrganizationsService,
+        private _gitRepositoriesServices: RepositoriesService,
+        private _genericService: GenericService,
+        private _translationsService: TranslationsService,
+        public _globals: Globals
+    ) {
+        this.isLoading = true;
+    }
 
     ngOnInit() {
         this._translationsService.getDocumentTranslations(this.documentTranslation).subscribe((x) => {
@@ -82,6 +91,8 @@ export class GitHubHomeComponent implements OnInit {
                                     };
                                 }),
                             });
+
+                            this.isLoading = false;
                         });
                     });
                 });

@@ -9,14 +9,18 @@ import { Globals } from '../../../globals';
     providers: [Globals],
 })
 export class HeaderComponent implements OnInit {
+    public isLoading;
     private documentTranslation = 'Header';
     public pageTranslations;
 
-    constructor(private _translationsService: TranslationsService, public _globals: Globals) {}
+    constructor(private _translationsService: TranslationsService, public _globals: Globals) {
+        this.isLoading = true;
+    }
 
     ngOnInit() {
         this._translationsService.getDocumentTranslations(this.documentTranslation).subscribe((x) => {
             this.pageTranslations = x;
+            this.isLoading = false;
         });
     }
 
