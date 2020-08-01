@@ -6,24 +6,32 @@
 
 <h2 id="oranizations">
     <strong>{{ getTranslation('organizations') }}</strong
-    ><small>({{ dataGroupedSanitized.length }})</small>
+    ><small> ({{ getOrganizations(dataGroupedSanitized).length }})</small>
 </h2>
 
-<ul>
-    <li *ngFor="let organization of getOrganizations(dataGroupedSanitized)">
-        <a *ngIf="organization.organizationUrl != ''" [href]="organization.organizationUrl">{{ organization.organizationName }}</a>
-    </li>
-</ul>
+<div class="row">
+    <div class="col-md-3 col-sm-3 col-xs-3" *ngFor="let organization of getOrganizations(dataGroupedSanitized)">
+        <div class="card">
+            <img [src]="organization.organizationImage" class="card-img-top" />
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ organization.organizationName }}</h5>
+                <a [href]="organization.organizationUrl" class="btn btn-primary">{{ getTranslation('goToOrganization') }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
 
 <h2 id="repositories">
     <strong>{{ getTranslation('repositories') }}</strong>
 </h2>
 
 <div class="accordion" id="accordionExample">
-    <div class="card" *ngFor="let organization of dataGroupedSanitized">
-        <div class="card-header" id="headingOne">
+    <div class="card" *ngFor="let organization of dataGroupedSanitized; let i = index">
+        <div class="card-header" [id]="'heading' + i">
             <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
                     <h5>
                         {{ organization.organizationUrl === '' ? this.getTranslation('notInOrg') : organization.organizationName }}
                         <small>({{ organization.repositories.length }})</small>
@@ -32,7 +40,7 @@
             </h2>
         </div>
 
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div [id]="'collapse' + i" class="collapse" [ngClass]="i === 0 ? 'show' : null" [aria-labelledby]="'heading' + i" data-parent="#accordionExample">
             <ul class="list-group">
                 <li class="list-group-item" *ngFor="let repository of organization.repositories">
                     <a [href]="repository.repositoryUrl">{{ repository.repositoryName }}</a> -

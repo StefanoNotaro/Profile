@@ -1,4 +1,5 @@
 export interface Organization {
+    organizationImage: string;
     organizationName: string;
     organizationUrl: string;
     repositories: Repository[];

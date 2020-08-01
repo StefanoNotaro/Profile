@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslationsService } from '../../../services/translations/translations.service';
 import { Globals } from '../../../globals';
+import { FirebaseService } from '../../../services/firebase/firebase.service';
+import { DocumentData } from '@angular/fire/firestore';
 
 @Component({
     selector: 'app-header',
@@ -11,9 +13,11 @@ import { Globals } from '../../../globals';
 export class HeaderComponent implements OnInit {
     public isLoading;
     private documentTranslation = 'Header';
+    private languajesDocumetns = 'languages';
+    public languagesAvailables: DocumentData[];
     public pageTranslations;
 
-    constructor(private _translationsService: TranslationsService, public _globals: Globals) {
+    constructor(private _translationsService: TranslationsService, public _globals: Globals, private _firebaseServices: FirebaseService) {
         this.isLoading = true;
     }
 
@@ -22,6 +26,7 @@ export class HeaderComponent implements OnInit {
             this.pageTranslations = x;
             this.isLoading = false;
         });
+        this._firebaseServices.get(this.languajesDocumetns).subscribe((l) => (this.languagesAvailables = l));
     }
 
     public getTranslation(field: string): string {

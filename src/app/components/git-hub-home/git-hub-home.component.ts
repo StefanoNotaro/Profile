@@ -38,7 +38,6 @@ export class GitHubHomeComponent implements OnInit {
     ngOnInit() {
         this._translationsService.getDocumentTranslations(this.documentTranslation).subscribe((x) => {
             this.pageTranslations = x;
-            console.log(x);
         });
 
         this._gitOrganizatinosServices.getOrganizations(this.userName).subscribe((gitOrgs: GitOrganization[]) => {
@@ -46,55 +45,38 @@ export class GitHubHomeComponent implements OnInit {
                 gitOrgs.forEach((gitOrg) => {
                     this._genericService.get(gitOrg.url).subscribe((gitOrgData: any) => {
                         this._genericService.get(gitOrg.repos_url).subscribe((gitRepos: GitRepository[]) => {
-                            for (const gitRepo of gitRepos) {
-                                this.data.push({
-                                    organizationName: gitOrg.login,
-                                    organizationUrl: gitOrgData.html_url,
-                                    repositoryName: gitRepo.name,
-                                    repositoryUrl: gitRepo.html_url,
-                                    gitHubPage: gitRepo.homepage,
-                                    hasPages: gitRepo.has_pages,
-                                });
-                            }
-
-                            this.dataGroupByOrganization = _.groupBy(this.data, (g) => g.organizationName);
-
-                            for (const key of Object.keys(this.dataGroupByOrganization)) {
-                                const value = this.dataGroupByOrganization[key];
-                                const repos: Repository[] = [];
-                                let i = 0;
-                                for (const rep of value) {
-                                    i++;
-                                    repos.push({
-                                        repositoryName: rep.repositoryName,
-                                        repositoryUrl: rep.repositoryUrl,
-                                        gitHubPage: rep.gitHubPage,
-                                        hasPages: rep.hasPages,
-                                    });
-                                }
-
-                                this.dataGroupedSanitized.push({
-                                    organizationName: key,
-                                    organizationUrl: value[0].organizationUrl,
-                                    repositories: repos,
-                                });
-                            }
                             this.dataGroupedSanitized.push({
-                                organizationName: 'Not in Organization',
-                                organizationUrl: '',
-                                repositories: nonOrgRepos.map((r) => {
+                                organizationImage: gitOrgData.avatar_url,
+                                organizationName: gitOrgData.name !== null ? gitOrgData.name : gitOrgData.login,
+                                organizationUrl: gitOrgData.html_url,
+                                repositories: gitRepos.map((rep) => {
                                     return {
-                                        gitHubPage: r.homepage,
-                                        hasPages: r.has_pages,
-                                        repositoryName: r.name,
-                                        repositoryUrl: r.html_url,
+                                        repositoryName: rep.name,
+                                        repositoryUrl: rep.html_url,
+                                        gitHubPage: rep.homepage,
+                                        hasPages: rep.has_pages,
                                     };
                                 }),
                             });
 
+                            this.dataGroupedSanitized = _.sortBy(this.dataGroupedSanitized, 'organizationName');
+
                             this.isLoading = false;
                         });
                     });
+                });
+                this.dataGroupedSanitized.push({
+                    organizationName: 'Not in Organization',
+                    organizationImage: '',
+                    organizationUrl: '',
+                    repositories: nonOrgRepos.map((r) => {
+                        return {
+                            gitHubPage: r.homepage,
+                            hasPages: r.has_pages,
+                            repositoryName: r.name,
+                            repositoryUrl: r.html_url,
+                        };
+                    }),
                 });
             });
         });
