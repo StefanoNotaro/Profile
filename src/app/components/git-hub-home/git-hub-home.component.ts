@@ -7,23 +7,33 @@ import * as _ from 'underscore';
 import { Dictionary } from 'underscore';
 import { Organization, Repository } from '../models/organization.model';
 import { RepositoriesService } from '../../services/github/repositories.service';
+import { TranslationsService } from '../../services/translations/translations.service';
+import { Globals } from '../../globals';
 
 @Component({
     selector: 'app-git-hub-home',
     templateUrl: './git-hub-home.component.html',
     styleUrls: ['./git-hub-home.component.css'],
+    providers: [Globals],
 })
 export class GitHubHomeComponent implements OnInit {
     private userName = 'StefanoNotaro';
     public data = [];
     public dataGroupByOrganization: Dictionary<any[]>;
     public dataGroupedSanitized: Organization[] = [];
-    constructor(private _gitOrganizatinosServices: OrganizationsService, private _gitRepositoriesServices: RepositoriesService, private _genericService: GenericService) {}
+    public pageTranslations;
+    private documentTranslation = 'gitHubHome';
+
+    constructor(private _gitOrganizatinosServices: OrganizationsService, private _gitRepositoriesServices: RepositoriesService, private _genericService: GenericService, private _translationsService: TranslationsService, public _globals: Globals) {}
 
     ngOnInit() {
+        this._translationsService.getDocumentTranslations(this.documentTranslation).subscribe((x) => {
+            this.pageTranslations = x;
+            console.log(x);
+        });
+
         this._gitOrganizatinosServices.getOrganizations(this.userName).subscribe((gitOrgs: GitOrganization[]) => {
             this._gitRepositoriesServices.getRepositories(this.userName).subscribe((nonOrgRepos: GitRepository[]) => {
-                console.log(nonOrgRepos);
                 gitOrgs.forEach((gitOrg) => {
                     this._genericService.get(gitOrg.url).subscribe((gitOrgData: any) => {
                         this._genericService.get(gitOrg.repos_url).subscribe((gitRepos: GitRepository[]) => {
@@ -81,5 +91,13 @@ export class GitHubHomeComponent implements OnInit {
 
     public getOrganizations(organizations: Organization[]) {
         return organizations.filter((x) => x.organizationUrl !== '');
+    }
+
+    public getTranslation(field: string): string {
+        if (!this.pageTranslations) {
+            return;
+        }
+
+        return this.pageTranslations[field][this._translationsService.getLanguage()];
     }
 }

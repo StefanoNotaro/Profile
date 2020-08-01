@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
 .header {
-  padding: 50px;
-  background-image: url("src\assets\images\header-image.png");
+    /* padding: 50px; */
+    padding-bottom: 50px;
+    background-image: url("src\assets\images\header-image.png");
 }

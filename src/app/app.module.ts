@@ -11,12 +11,16 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, GitHubHomeComponent, PageNotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MDBBootstrapModule.forRoot(), BrowserAnimationsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+    declarations: [AppComponent, HeaderComponent, FooterComponent, GitHubHomeComponent, PageNotFoundComponent],
+    imports: [BrowserModule, AppRoutingModule, HttpClientModule, MDBBootstrapModule.forRoot(), BrowserAnimationsModule, AngularFireModule.initializeApp(environment.firebaseConfig, 'Profile'), AngularFirestoreModule, AngularFireDatabaseModule],
+    providers: [],
+    bootstrap: [AppComponent],
+    schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

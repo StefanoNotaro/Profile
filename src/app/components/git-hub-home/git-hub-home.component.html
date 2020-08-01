@@ -1,5 +1,6 @@
-<h1 id="welcome-to-stefano-notaro-profile-page">Welcome to Stefano Notaro profile page</h1>
+<h1>{{ getTranslation('welcome') }}</h1>
 
+<!-- <p>{{ getTranslation('description') }}</p> -->
 <p>The purpose of this profile is to guide you to my differents repositories in github.</p>
 
 <p>
@@ -12,7 +13,8 @@
 </p>
 
 <h2 id="oranizations">
-    <strong>Organizations</strong><small>({{ dataGroupedSanitized.length }})</small>
+    <strong>{{ getTranslation('organizations') }}</strong
+    ><small>({{ dataGroupedSanitized.length }})</small>
 </h2>
 
 <ul>
@@ -21,7 +23,9 @@
     </li>
 </ul>
 
-<h2 id="repositories"><strong>Repositories</strong></h2>
+<h2 id="repositories">
+    <strong>{{ getTranslation('repositories') }}</strong>
+</h2>
 
 <div class="accordion" id="accordionExample">
     <div class="card" *ngFor="let d of dataGroupedSanitized">
@@ -39,8 +43,8 @@
             <ul class="list-group">
                 <li class="list-group-item" *ngFor="let repository of d.repositories">
                     <a [href]="repository.repositoryUrl">{{ repository.repositoryName }}</a> -
-                    <a *ngIf="repository.hasPages" [href]="repository.gitHubPage"> Preview Page</a>
-                    <a *ngIf="!repository.hasPages"> Preview Not Available</a>
+                    <a *ngIf="repository.hasPages" [href]="repository.gitHubPage"> {{ getTranslation('previewPage') }}</a>
+                    <a *ngIf="!repository.hasPages"> {{ getTranslation('noPreviewPage') }}</a>
                 </li>
             </ul>
         </div>
