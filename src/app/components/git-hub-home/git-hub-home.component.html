@@ -1,11 +1,12 @@
 <app-loading *ngIf="isLoading"></app-loading>
-<h1>{{ getTranslation('welcome') }}</h1>
+<h1>{{ _translateService.instant('gitHubHome.title') }}</h1>
 
-<!-- <p>{{ getTranslation('description') }}</p> -->
-<span [innerHtml]="getTranslation('description')"></span>
+<p>{{ _translateService.instant('gitHubHome.description.line1') }}</p>
+<p> {{ _translateService.instant('gitHubHome.description.line2') }}<br>{{ _translateService.instant('gitHubHome.description.line3') }}<br> {{ _translateService.instant('gitHubHome.description.line4') }} </p>
+<p> {{ _translateService.instant('gitHubHome.description.line5') }}<br> {{ _translateService.instant('gitHubHome.description.line6') }} </p>
 
 <h2 id="oranizations">
-    <strong>{{ getTranslation('organizations') }}</strong
+    <strong>{{ _translateService.instant('gitHubHome.organizationTitle') }}</strong
     ><small> ({{ getOrganizations(dataGroupedSanitized).length }})</small>
 </h2>
 

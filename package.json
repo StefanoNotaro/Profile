@@ -23,6 +23,8 @@
         "@angular/platform-browser-dynamic": "~8.2.14",
         "@angular/router": "~8.2.14",
         "@fortawesome/fontawesome-free": "^5.14.0",
+        "@ngx-translate/core": "^13.0.0",
+        "@ngx-translate/http-loader": "^6.0.0",
         "@types/underscore": "^1.10.17",
         "angular-bootstrap-md": "^8.10.1",
         "animate.css": "^4.1.0",

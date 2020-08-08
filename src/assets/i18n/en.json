@@ -1,0 +1,17 @@
+{
+    "header": {
+        "title": "Developer",
+        "description": "Allways try to learn something new. There is nothing I don't want to learn."
+    },
+    "gitHubHome": {
+        "title": "Welcome to Stefano Notaro profile page",
+        "description": {
+            "line1": "The purpose of this profile is to guide you to my differents repositories in github.",
+            "line2": "This page is organized as follow:",
+            "line3": "On the first section are all my github’s organizations. There I have all the repositories from the same technology.",
+            "line4": "Ex: In “Angular Repositories” you will see all my Angular repositories, with a link to get into the organization.",
+            "line5": "Then you have the “Repositories” section.",
+            "line6": "Here is a direct link to the repositories. This ones are organized by organization."
+        }
+    }
+}

@@ -9,6 +9,7 @@ import { Organization, Repository } from '../models/organization.model';
 import { RepositoriesService } from '../../services/github/repositories.service';
 import { TranslationsService } from '../../services/translations/translations.service';
 import { Globals } from '../../globals';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-git-hub-home',
@@ -30,7 +31,8 @@ export class GitHubHomeComponent implements OnInit {
         private _gitRepositoriesServices: RepositoriesService,
         private _genericService: GenericService,
         private _translationsService: TranslationsService,
-        public _globals: Globals
+        public _globals: Globals,
+        public _translateService: TranslateService
     ) {
         this.isLoading = true;
     }

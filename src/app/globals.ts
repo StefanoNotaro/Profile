@@ -4,4 +4,6 @@ import { Injectable } from '@angular/core';
 export class Globals {
     languaje = 'en';
     localStorageLanguageKey = 'ProfilePageLanguage';
+    languages = [ 'en', 'es' ];
+    languagesRegex = /en|es/;
 }
