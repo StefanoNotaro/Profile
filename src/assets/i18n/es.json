@@ -13,6 +13,9 @@
             "line5": "Luego tienes la sección “Repositorios”",
             "line6": "Aquí tendrás un link directo al repositorio en sí. Estos están organizados por organizaciones."
         },
-        "organizationTitle": "Organizaciones"
+        "organizationTitle": "Organizaciones",
+        "goToOrganization": "Ir a la organización",
+        "repositoryTitle": "Repositorios",
+        "notInOrg": "Sin Organización"
     }
 }

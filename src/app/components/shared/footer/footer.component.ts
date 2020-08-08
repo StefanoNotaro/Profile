@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslationsService } from '../../../services/translations/translations.service';
 import { Globals } from '../../../globals';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-footer',
@@ -28,7 +29,7 @@ export class FooterComponent implements OnInit {
         },
     ];
 
-    constructor(private _translationsService: TranslationsService, public _globals: Globals) {}
+    constructor(public _translateService: TranslateService, private _translationsService: TranslationsService, public _globals: Globals) {}
 
     ngOnInit() {
         this._translationsService.getDocumentTranslations(this.documentTranslation).subscribe((x) => {
