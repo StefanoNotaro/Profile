@@ -3,6 +3,11 @@
         "title": "Developer",
         "description": "Allways try to learn something new. There is nothing I don't want to learn."
     },
+    "footer": {
+        "maintenedBy": "This site is maintened by ",
+        "usefulLink": "useful links",
+        "contact": "contact"
+    },
     "gitHubHome": {
         "title": "Welcome to Stefano Notaro profile page",
         "description": {
@@ -15,6 +20,9 @@
         },
         "organizationTitle": "Organization",
         "goToOrganization": "Go to organization",
-        "repositoryTitle": "Repositories"
+        "repositoryTitle": "Repositories",
+        "notInOrg": "Not In Organization",
+        "previewPage": "Preview Page",
+        "noPreviewPage": "Preview Not Available"
     }
 }

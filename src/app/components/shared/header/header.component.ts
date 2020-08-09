@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslationsService } from '../../../services/translations/translations.service';
 import { Globals } from '../../../globals';
-import { FirebaseService } from '../../../services/firebase/firebase.service';
-import { DocumentData } from '@angular/fire/firestore';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -13,16 +10,17 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
     public isLoading;
-    private documentTranslation = 'Header';
-    private languajesDocumetns = 'languages';
-    public languagesAvailables: DocumentData[];
-    public pageTranslations;
 
-    constructor(public _translateService: TranslateService) {
+    constructor(public _translateService: TranslateService, public _globals: Globals) {
         this.isLoading = true;
+        console.log(_translateService.currentLang);
     }
 
     ngOnInit() {
         this.isLoading = false;
+    }
+
+    public getLanguageName(lang: string) {
+        return this._globals.languages.filter(x => x.language === lang).pop().languageName;
     }
 }

@@ -10,12 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
     title = 'Profile';
-    constructor(public _translateService: TranslateService, private _globals: Globals) {
-        localStorage.setItem(_globals.localStorageLanguageKey, _globals.languaje);
-        
-        _translateService.addLangs(_globals.languages);
-        _translateService.setDefaultLang(_globals.languages[0]);
+    constructor(public _translateService: TranslateService, _globals: Globals) {
+        const languages = _globals.languages.map(x => x.language);
+        _translateService.addLangs(languages);
+        _translateService.setDefaultLang(languages[0]);
         const browserLanguage = _translateService.getBrowserLang();
-        _translateService.use(browserLanguage.match(_globals.languagesRegex) ? browserLanguage : _globals.languages[0]);
+        _translateService.use(browserLanguage.match(_globals.languagesRegex) ? browserLanguage : languages[0]);
     }
 }

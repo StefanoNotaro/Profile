@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslationsService } from '../../../services/translations/translations.service';
 import { Globals } from '../../../globals';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -10,8 +9,6 @@ import { TranslateService } from '@ngx-translate/core';
     providers: [Globals],
 })
 export class FooterComponent implements OnInit {
-    private documentTranslation = 'footer';
-    public pageTranslations;
 
     public copyRightYear = new Date().getFullYear();
     public gitHubUrl = 'https://github.com/StefanoNotaro';
@@ -29,19 +26,8 @@ export class FooterComponent implements OnInit {
         },
     ];
 
-    constructor(public _translateService: TranslateService, private _translationsService: TranslationsService, public _globals: Globals) {}
+    constructor(public _translateService: TranslateService, public _globals: Globals) {}
 
     ngOnInit() {
-        this._translationsService.getDocumentTranslations(this.documentTranslation).subscribe((x) => {
-            this.pageTranslations = x;
-        });
-    }
-
-    public getTranslation(field: string): string {
-        if (!this.pageTranslations) {
-            return;
-        }
-
-        return this.pageTranslations[field][this._translationsService.getLanguage()];
     }
 }

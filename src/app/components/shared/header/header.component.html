@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto"></ul>
                 <select #languageSelect (change)="_translateService.use(languageSelect.value)" class="selectpicker lang-select" data-width="fit">
-                    <option *ngFor="let lang of _translateService.getLangs()" [value]="lang">{{lang}}</option>
+                    <option *ngFor="let lang of _translateService.getLangs()" [value]="lang" [selected]="_translateService.currentLang">{{getLanguageName(lang)}}</option>
                 </select>
             </div>
         </nav>

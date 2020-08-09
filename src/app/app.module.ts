@@ -7,16 +7,12 @@ import { AppComponent } from './app.component';
 import { GitHubHomeComponent } from './components/git-hub-home/git-hub-home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment } from '../environments/environment';
 import { SharedModule } from './components/shared/shared.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -35,9 +31,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         }),
         MDBBootstrapModule.forRoot(),
         BrowserAnimationsModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig, 'Profile'),
-        AngularFirestoreModule,
-        AngularFireDatabaseModule,
     ],
     exports: [],
     providers: [],
