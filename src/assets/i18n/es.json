@@ -8,6 +8,10 @@
         "usefulLink": "links utiles",
         "contact": "contacto"
     },
+    "pageNotFound": {
+        "pageNotFoun": "404 - La página no pudo ser encontrada",
+        "goToHome": "Regresar a página principal"
+    },
     "gitHubHome": {
         "title": "Bienvenido al perfil de Stefano Notaro",
         "description": {
