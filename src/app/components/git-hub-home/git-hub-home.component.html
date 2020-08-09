@@ -1,0 +1,56 @@
+<app-loading *ngIf="isLoading"></app-loading>
+<div *ngIf="!isLoading">
+    <h1>{{ _translateService.instant('gitHubHome.title') }}</h1>
+
+    <p>{{ _translateService.instant('gitHubHome.description.line1') }}</p>
+    <p> {{ _translateService.instant('gitHubHome.description.line2') }}<br>{{ _translateService.instant('gitHubHome.description.line3') }}<br> {{ _translateService.instant('gitHubHome.description.line4') }} </p>
+    <p> {{ _translateService.instant('gitHubHome.description.line5') }}<br> {{ _translateService.instant('gitHubHome.description.line6') }} </p>
+
+    <h2 id="oranizations">
+        <strong>{{ _translateService.instant('gitHubHome.organizationTitle') }}</strong
+        ><small> ({{ getOrganizations(dataGroupedSanitized).length }})</small>
+    </h2>
+    
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3" *ngFor="let organization of getOrganizations(dataGroupedSanitized)">
+            <div class="card">
+                <img [src]="organization.organizationImage" class="card-img-top" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ organization.organizationName }}</h5>
+                    <a [href]="organization.organizationUrl" class="btn btn-primary">{{ _translateService.instant('gitHubHome.goToOrganization') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br />
+    
+    <h2 id="repositories">
+        <strong>{{ _translateService.instant('gitHubHome.repositoryTitle') }}</strong>
+    </h2>
+
+    <div class="accordion" id="accordionExample">
+        <div class="card" *ngFor="let organization of dataGroupedSanitized; let i = index">
+            <div class="card-header" [id]="'heading' + i">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
+                        <h5>
+                            {{ organization.organizationUrl === '' ? _translateService.instant('gitHubHome.notInOrg') : organization.organizationName }}
+                            <small>({{ organization.repositories.length }})</small>
+                        </h5>
+                    </button>
+                </h2>
+            </div>
+
+            <div [id]="'collapse' + i" class="collapse" [ngClass]="i === 0 ? 'show' : null" [aria-labelledby]="'heading' + i" data-parent="#accordionExample">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let repository of organization.repositories">
+                        <a [href]="repository.repositoryUrl">{{ repository.repositoryName }}</a> -
+                        <a *ngIf="repository.hasPages" [href]="repository.gitHubPage"> {{ _translateService.instant('gitHubHome.previewPage') }}</a>
+                        <a *ngIf="!repository.hasPages"> {{ _translateService.instant('gitHubHome.noPreviewPage') }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

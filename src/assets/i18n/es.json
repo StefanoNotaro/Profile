@@ -1,0 +1,32 @@
+{
+    "header": {
+        "title": "Desarrollador",
+        "description": "Siempre intentando aprender algo nuevo. No hay nada que no quiera aprender."
+    },
+    "footer": {
+        "maintenedBy": "Este sitio es mantenido por ",
+        "usefulLink": "links utiles",
+        "contact": "contacto"
+    },
+    "pageNotFound": {
+        "pageNotFoun": "404 - La página no pudo ser encontrada",
+        "goToHome": "Regresar a página principal"
+    },
+    "gitHubHome": {
+        "title": "Bienvenido al perfil de Stefano Notaro",
+        "description": {
+            "line1": "El propósito de este perfil es guiarte mediante mis diferentes repositorios en GitHub.",
+            "line2": "Esta página está organizada de la siguiente manera:",
+            "line3": "En la primer sección veras mis organizaciones en GitHub. Allí es donde contengo todos los repositorios de la misma tecnología.",
+            "line4": "Ej.: En “Repositorios Angular”, veras todos mis repositorios con los proyectos realizados en la tecnología de Angular",
+            "line5": "Luego tienes la sección “Repositorios”",
+            "line6": "Aquí tendrás un link directo al repositorio en sí. Estos están organizados por organizaciones."
+        },
+        "organizationTitle": "Organizaciones",
+        "goToOrganization": "Ir a la organización",
+        "repositoryTitle": "Repositorios",
+        "notInOrg": "Sin Organización",
+        "previewPage": "Vista Previa",
+        "noPreviewPage": "Vista Previa No Disponible"
+    }
+}
