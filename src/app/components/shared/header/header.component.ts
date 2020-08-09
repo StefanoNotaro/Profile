@@ -11,9 +11,13 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
     public isLoading;
 
+    public menues = [
+        { path: 'GitHubHome', displayName: 'GitHhub' },
+        { path: 'About', displayName: 'Sobre Mí' },
+    ];
+
     constructor(public _translateService: TranslateService, public _globals: Globals) {
         this.isLoading = true;
-        console.log(_translateService.currentLang);
     }
 
     ngOnInit() {

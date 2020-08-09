@@ -10,16 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './components/shared/shared.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AboutComponent } from './components/about/about.component';
+import { RouterModule } from '@angular/router';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-    declarations: [AppComponent, GitHubHomeComponent],
+    declarations: [AppComponent, GitHubHomeComponent, AboutComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
+        RouterModule,
         SharedModule,
         HttpClientModule,
         TranslateModule.forRoot({

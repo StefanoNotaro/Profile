@@ -28,5 +28,16 @@
         "notInOrg": "Not In Organization",
         "previewPage": "Preview Page",
         "noPreviewPage": "Preview Not Available"
+    },
+    "about": {
+        "title": "About me",
+        "technologies": "Technologies i know:",
+        "git": "GIT (version control)",
+        "angular": "Angular 8 (Angular 2 onwards)",
+        "workExperience": "Work Experience:",
+        "projectWorkedIn": "Projects in which I work:",
+        "personalProjects": "Personal Projects:",
+        "tester": "<b>Tester</b> Since {{ since }} until {{ until }} ({{ years }} years and {{ months }} months)",
+        "developer": "<b>Developer</b> Since {{ since }} until {{ until }} ({{ years }} years and {{ months }} months)"
     }
 }

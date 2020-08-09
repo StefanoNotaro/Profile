@@ -28,5 +28,16 @@
         "notInOrg": "Sin Organización",
         "previewPage": "Vista Previa",
         "noPreviewPage": "Vista Previa No Disponible"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "technologies": "Tecnologías que manejo:",
+        "git": "GIT (manejo de repositorios)",
+        "angular": "Angular 8 (Angular 2 en adelante)",
+        "workExperience": "Experiencia Laboral:",
+        "projectWorkedIn": "Proyectos en los cuales trabaje:",
+        "personalProjects": "Proyectos Personales:",
+        "tester": "<b>Tester</b>. Desde {{ since }} hasta {{ until }} ({{ years }} años y {{ months }} meses)",
+        "developer": "<b>Desarrollador</b>. Desde {{ since }} hasta {{ until }} ({{ years }} años y {{ months }} meses)"
     }
 }

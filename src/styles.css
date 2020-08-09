@@ -10,3 +10,12 @@ body {
     padding-bottom: 50px;
     background-image: url('src\assets\images\header-image.png');
 }
+
+.main-body h1,
+.main-body h2,
+.main-body h3,
+.main-body h4,
+.main-body h5,
+.main-body h6 {
+    color: black;
+}

@@ -1,0 +1,28 @@
+<app-loading *ngIf="isLoading"></app-loading>
+<div *ngIf="!isLoading">
+    <h1>{{ _translateService.instant('about.title') }}</h1>
+
+    <h2>{{ _translateService.instant('about.technologies') }}</h2>
+    <ul class="">
+        <li class=""><i class="fab fa-git-alt"></i> {{ _translateService.instant('about.git') }}</li>
+        <li class=""><i class="fas fa-code"></i> C#</li>
+        <li class=""><i class="fas fa-code"></i> .Net Framework</li>
+        <li class=""><i class="fas fa-code"></i> .Net Framework Entity Core</li>
+        <li class=""><i class="fas fa-code"></i> ASP.NET Web Api</li>
+        <li class=""><i class="fas fa-code"></i> LINQ</li>
+        <li class=""><i class="fas fa-database"></i> SQL</li>
+        <li class=""><i class="fas fa-file-code"></i> JSON</li>
+        <li class=""><i class="fab fa-angular"></i> {{ _translateService.instant('about.angular') }}</li>
+        <li class=""><i class="fab fa-angular"></i> Angular JS </li>
+    </ul>
+    <h2>{{ _translateService.instant('about.workExperience') }}</h2>
+    <ul>
+        <li>Practia Uruguay</li>
+        <ul>
+            <li [innerHTML]="_translateService.instant('about.tester', { since: testerInitDate | date:'dd/MM/yyyy', until: testerEndDate | date:'dd/MM/yyyy', years: testerTime.years, months: testerTime.months})"></li>
+            <li [innerHTML]="_translateService.instant('about.developer', { since: developerInitDate | date:'dd/MM/yyyy', until: developerEndDate | date:'dd/MM/yyyy', years: developerTime.years, months: developerTime.months})"></li>
+        </ul>
+    </ul>
+    <h2>{{ _translateService.instant('about.projectWorkedIn') }}</h2>
+    <h2>{{ _translateService.instant('about.personalProjects') }}</h2>
+</div>
