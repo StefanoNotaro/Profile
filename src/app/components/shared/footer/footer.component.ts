@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from '../../../globals';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-footer',
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.css'],
-    providers: [Globals],
+    providers: [],
 })
 export class FooterComponent implements OnInit {
-
     public copyRightYear = new Date().getFullYear();
     public gitHubUrl = 'https://github.com/StefanoNotaro';
     public contactMail = 'stefano.notaro@gmail.com';
@@ -26,8 +24,7 @@ export class FooterComponent implements OnInit {
         },
     ];
 
-    constructor(public _translateService: TranslateService, public _globals: Globals) {}
+    constructor(public _translateService: TranslateService) {}
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 }
