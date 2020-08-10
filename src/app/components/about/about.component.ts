@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-about',
@@ -14,16 +15,30 @@ export class AboutComponent implements OnInit {
     years: this.getYearDiff(this.testerInitDate, this.testerEndDate),
     months: this.getMonthDiff(this.testerInitDate, this.testerEndDate),
   };
-  
+
   public developerInitDate = new Date(2018, 9, 10);
   public developerEndDate = new Date();
   public developerTime = {
-    years: this.getYearDiff(this.developerInitDate, this.developerEndDate),
+    years: this.getYearDiff(this.developerInitDate, this.developerEndDate) - 1,
     months: this.getMonthDiff(this.developerInitDate, this.developerEndDate),
   };
 
+  public technologiesKnown = [
+      {name: this._translateService.instant('about.git'), icon: 'fab fa-git-alt'},
+      {name: 'C#', icon: 'fas fa-code'},
+      {name: '.Net Framework', icon: 'fas fa-code'},
+      {name: '.Net Framework Entity Code', icon: 'fas fa-code'},
+      {name: 'ASP.NET Web Api', icon: 'fas fa-code'},
+      {name: 'LINQ', icon: 'fas fa-code'},
+      {name: 'SQL', icon: 'fas fa-database'},
+      {name: 'JSON', icon: 'fas fa-file-code'},
+      {name: this._translateService.instant('about.angular'), icon: 'fab fa-angular'},
+      {name: 'Angular JS', icon: 'fab fa-angular'},
+      {name: 'CSS', icon: 'fab fa-css3'},
+  ];
 
-  constructor(public _translateService: TranslateService) {  }
+  constructor(public _translateService: TranslateService) {
+  }
 
   ngOnInit() {
   }

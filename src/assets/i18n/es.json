@@ -35,9 +35,18 @@
         "git": "GIT (manejo de repositorios)",
         "angular": "Angular 8 (Angular 2 en adelante)",
         "workExperience": "Experiencia Laboral:",
+        "workExperienceData": {
+            "tester": "<b>Tester</b>. Desde {{ since }} hasta {{ until }} ({{ years }} años y {{ months }} meses)",
+            "developer": "<b>Desarrollador</b>. Desde {{ since }} hasta {{ until }} ({{ years }} años y {{ months }} meses)"
+        },
         "projectWorkedIn": "Proyectos en los cuales trabaje:",
-        "personalProjects": "Proyectos Personales:",
-        "tester": "<b>Tester</b>. Desde {{ since }} hasta {{ until }} ({{ years }} años y {{ months }} meses)",
-        "developer": "<b>Desarrollador</b>. Desde {{ since }} hasta {{ until }} ({{ years }} años y {{ months }} meses)"
+        "projectWorkedInData": {
+            "likeTester": "Como Tester",
+            "likeDeveloper": "Como Desarrollador",
+            "UPM": "Con UPM fue mi primera experiencia laboral. Entre como tester para los modulos de planeamiento e inventario, los cuales estaban en desarrollo para su salida a producción.",
+            "AGESIC": "Con AGESIC estuvimos testeando con compañeros, la nueva herramienta que estaba desarrollando otro proveedor. La herramienta consistia en digitalizar los tramites del gobierno uruguayo para que sea mas accesible y facil para los uruguayos poder realizar todos los tramites, sin tener la necesidad de ir presencialmente a una oficina.",
+            "VisaNetUruguay": "El proyecto con VisaNet consistia en la migración de la base de datos de Oracle 10 a Oracle 12."
+        },
+        "personalProjects": "Proyectos Personales:"
     }
 }
