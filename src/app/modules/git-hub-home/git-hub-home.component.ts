@@ -2,13 +2,13 @@ import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 
-import { OrganizationsService } from '../../shared/services/github/organizations.service';
-import { RepositoriesService } from '../../shared/services/github/repositories.service';
+import { RepositoriesService } from './services/repositories.service';
+import { OrganizationsService } from './services/organizations.service';
 import { GenericService } from '../../shared/services/common/generic.service';
 
-import { Organization } from '../../shared/models/organization.model';
-import { GitRepository } from '../../shared/models/git-repository.model';
-import { GitOrganization } from '../../shared/models/git-organization.model';
+import { Organization } from './models/organization.model';
+import { GitRepository } from './models/git-repository.model';
+import { GitOrganization } from './models/git-organization.model';
 
 import * as _ from 'underscore';
 import { Dictionary } from 'underscore';
