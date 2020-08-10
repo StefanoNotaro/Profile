@@ -5,12 +5,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoadingComponent } from './loading/loading.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { RouterModule } from '@angular/router';
 
 const components = [PageNotFoundComponent, HeaderComponent, FooterComponent, LoadingComponent];
 
 @NgModule({
     declarations: [components, LoadingComponent],
-    imports: [CommonModule, NgxSpinnerModule],
+    imports: [CommonModule, NgxSpinnerModule, RouterModule],
     exports: [components],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

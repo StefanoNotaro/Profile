@@ -1,6 +1,7 @@
 <app-loading *ngIf="isLoading"></app-loading>
 <div *ngIf="!isLoading">
     <h1>{{ _translateService.instant('gitHubHome.title') }}</h1>
+    <hr>
 
     <p>{{ _translateService.instant('gitHubHome.description.line1') }}</p>
     <p> {{ _translateService.instant('gitHubHome.description.line2') }}<br>{{ _translateService.instant('gitHubHome.description.line3') }}<br> {{ _translateService.instant('gitHubHome.description.line4') }} </p>

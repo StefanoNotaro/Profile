@@ -12,3 +12,11 @@ select option {
     color: black;
     background-color: transparent;
 }
+
+.border-md-left {
+    border-left: 1px solid silver;
+}
+
+.nav-menu-item {
+    color: white;
+}

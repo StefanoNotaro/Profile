@@ -28,5 +28,25 @@
         "notInOrg": "Not In Organization",
         "previewPage": "Preview Page",
         "noPreviewPage": "Preview Not Available"
+    },
+    "about": {
+        "title": "About me",
+        "technologies": "Technologies i know:",
+        "git": "GIT (version control)",
+        "angular": "Angular 8 (Angular 2 onwards)",
+        "workExperience": "Work Experience:",
+        "projectWorkedIn": "Projects in which I work:",
+        "personalProjects": "Personal Projects:",
+        "workExperienceData": {
+            "tester": "<b>Tester</b>. Since {{ since }} until {{ until }} ({{ years }} years and {{ months }} months)",
+            "developer": "<b>Developer</b>. Since {{ since }} until {{ until }} ({{ years }} years and {{ months }} months)"
+        },
+        "projectWorkedInData": {
+            "likeTester": "Like Tester",
+            "likeDeveloper": "Like Developer",
+            "UPM": "With UPM it was my first work experience. I came in as a tester for the planning and inventory modules, which were in development for production.",
+            "AGESIC": "With AGESIC we were testing with colleagues, the new tool that another provider was developing. The tool consisted of digitizing the Uruguayan government procedures to make it more accessible and easier for Uruguayans to carry out all the procedures, without having to go to an office in person.",
+            "VisaNetUruguay": "The project with VisaNet consisted of the migration of the database from Oracle 10 to Oracle 12."
+        }
     }
 }

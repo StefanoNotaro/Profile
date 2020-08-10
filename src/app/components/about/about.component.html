@@ -1,0 +1,52 @@
+<app-loading *ngIf="isLoading"></app-loading>
+<div *ngIf="!isLoading">
+    <h1>{{ _translateService.instant('about.title') }}</h1>
+    <hr>
+
+    <h2>{{ _translateService.instant('about.technologies') }}</h2>
+    <ul>
+        <li *ngFor="let technology of technologiesKnown"><i [class]="technology.icon"></i> {{ technology.name }}</li>
+    </ul>
+    <h2>{{ _translateService.instant('about.workExperience') }}</h2>
+    <ul>
+        <li>Practia Uruguay</li>
+        <ul>
+            <li [innerHTML]="_translateService.instant('about.workExperienceData.tester', { since: testerInitDate | date:'dd/MM/yyyy', until: testerEndDate | date:'dd/MM/yyyy', years: testerTime.years, months: testerTime.months})"></li>
+            <li [innerHTML]="_translateService.instant('about.workExperienceData.developer', { since: developerInitDate | date:'dd/MM/yyyy', until: developerEndDate | date:'dd/MM/yyyy', years: developerTime.years, months: developerTime.months})"></li>
+        </ul>
+    </ul>
+    <h2>{{ _translateService.instant('about.projectWorkedIn') }}</h2>
+    <ul>
+        <li>{{ _translateService.instant('about.projectWorkedInData.likeTester') }}</li>
+        <ul>
+            <li><a data-toggle="collapse" href="#testerUPMBiofores" role="button" aria-expanded="false" aria-controls="testerUPMBiofores">UPM - Bioforest</a> </li>
+            <div class="collapse" id="testerUPMBiofores">
+                <div class="card card-body">
+                    {{ _translateService.instant('about.projectWorkedInData.UPM') }}
+                </div>
+            </div>
+            <li><a data-toggle="collapse" href="#testerAGESIC" role="button" aria-expanded="false" aria-controls="testerAGESIC">AGESIC</a> </li>
+            <div class="collapse" id="testerAGESIC">
+                <div class="card card-body">
+                    {{ _translateService.instant('about.projectWorkedInData.AGESIC') }}
+                </div>
+            </div>
+            <li><a data-toggle="collapse" href="#testerVisaNetUruguay" role="button" aria-expanded="false" aria-controls="testerVisaNetUruguay">VisaNet Uruguay</a></li>
+            <div class="collapse" id="testerVisaNetUruguay">
+                <div class="card card-body">
+                    {{ _translateService.instant('about.projectWorkedInData.VisaNetUruguay') }}
+                </div>
+            </div>
+        </ul>
+        <li>{{ _translateService.instant('about.projectWorkedInData.likeDeveloper') }}</li>
+        <ul>
+            <li>TO DO</li>
+            <li>TO DO</li>
+        </ul>
+    </ul>
+    <h2>{{ _translateService.instant('about.personalProjects') }}</h2>
+    <ul>
+        <li>TO DO</li>
+        <li>TO DO</li>
+    </ul>
+</div>
