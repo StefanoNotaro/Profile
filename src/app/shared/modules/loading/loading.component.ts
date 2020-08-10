@@ -7,9 +7,9 @@ import { NgxSpinnerService } from 'ngx-spinner';
     styleUrls: ['./loading.component.css'],
 })
 export class LoadingComponent implements OnInit {
-    constructor(private spinner: NgxSpinnerService) {
+    constructor(private spinner: NgxSpinnerService) {}
+
+    ngOnInit() {
         this.spinner.show();
     }
-
-    ngOnInit() {}
 }

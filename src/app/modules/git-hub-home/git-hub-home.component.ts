@@ -1,21 +1,23 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
-import { OrganizationsService } from '../../services/github/organizations.service';
-import { GitOrganization } from '../models/git-organization.model';
-import { GenericService } from '../../services/common/generic.service';
-import { GitRepository } from '../models/git-repository.model';
+import { forkJoin } from 'rxjs';
+
+import { RepositoriesService } from './services/repositories.service';
+import { OrganizationsService } from './services/organizations.service';
+import { GenericService } from '../../shared/services/common/generic.service';
+
+import { Organization } from './models/organization.model';
+import { GitRepository } from './models/git-repository.model';
+import { GitOrganization } from './models/git-organization.model';
+
 import * as _ from 'underscore';
 import { Dictionary } from 'underscore';
-import { Organization } from '../models/organization.model';
-import { RepositoriesService } from '../../services/github/repositories.service';
-import { Globals } from '../../globals';
-import { TranslateService } from '@ngx-translate/core';
-import { forkJoin } from 'rxjs';
 
 @Component({
     selector: 'app-git-hub-home',
     templateUrl: './git-hub-home.component.html',
     styleUrls: ['./git-hub-home.component.css'],
-    providers: [Globals],
+    providers: [],
 })
 export class GitHubHomeComponent implements OnInit {
     public isLoading: boolean;
@@ -29,25 +31,18 @@ export class GitHubHomeComponent implements OnInit {
         private _gitOrganizatinosServices: OrganizationsService,
         private _gitRepositoriesServices: RepositoriesService,
         private _genericService: GenericService,
-        public _globals: Globals,
         public _translateService: TranslateService
     ) {
         this.isLoading = true;
     }
 
     ngOnInit() {
-        forkJoin([
-            this._gitOrganizatinosServices.getOrganizations(this.userName),
-            this._gitRepositoriesServices.getRepositories(this.userName)
-        ]).subscribe(x => {
+        forkJoin([this._gitOrganizatinosServices.getOrganizations(this.userName), this._gitRepositoriesServices.getRepositories(this.userName)]).subscribe((x) => {
             const gitOrgs = x[0] as GitOrganization[];
             const nonOrgRepos = x[1] as GitRepository[];
             gitOrgs.forEach((gitOrg) => {
-                forkJoin([
-                    this._genericService.get(gitOrg.url),
-                    this._genericService.get(gitOrg.repos_url)
-                ]).subscribe(y => {
-                    const gitOrgData = y[0]as any;
+                forkJoin([this._genericService.get(gitOrg.url), this._genericService.get(gitOrg.repos_url)]).subscribe((y) => {
+                    const gitOrgData = y[0] as any;
                     const gitRepos = y[1] as GitRepository[];
                     this.dataGroupedSanitized.push({
                         organizationImage: gitOrgData.avatar_url,

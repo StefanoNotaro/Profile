@@ -4,14 +4,14 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GitHubHomeComponent } from './components/git-hub-home/git-hub-home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './components/shared/shared.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { AboutComponent } from './components/about/about.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
+import { GitHubHomeComponent } from './modules/git-hub-home/git-hub-home.component';
+import { AboutComponent } from './modules/about/about.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,8 +29,8 @@ export function HttpLoaderFactory(http: HttpClient) {
             loader: {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
-                deps: [ HttpClient ]
-            }
+                deps: [HttpClient],
+            },
         }),
         MDBBootstrapModule.forRoot(),
         BrowserAnimationsModule,
