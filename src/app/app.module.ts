@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { GitHubHomeComponent } from './modules/git-hub-home/git-hub-home.component';
 import { AboutComponent } from './modules/about/about.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -34,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         }),
         MDBBootstrapModule.forRoot(),
         BrowserAnimationsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ],
     exports: [],
     providers: [],
