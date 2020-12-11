@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1607718107927,
+  "timestamp": 1607718512341,
   "index": "https://StefanoNotaro.github.io/Profile/index.html",
   "assetGroups": [
     {
@@ -127,7 +127,7 @@
     "https://StefanoNotaro.github.io/Profile/assets/i18n/en.json": "20037ffe93a13e8e324946b9c04c898856a5e8a3",
     "https://StefanoNotaro.github.io/Profile/assets/i18n/es.json": "e134aea986b378b5fefabaf7869c6d9bf1ec37d3",
     "https://StefanoNotaro.github.io/Profile/assets/icons/icon-128x128.png": "128164da78001feafcda9997d44d55fbebafc47f",
-    "https://StefanoNotaro.github.io/Profile/assets/icons/icon-144x144.png": "d5140f1e3ca9c10c7b32c4daa6fdcddc6a1bb74c",
+    "https://StefanoNotaro.github.io/Profile/assets/icons/icon-144x144.png": "65a4394a3940bf0bd5b5972074af7bda9583b3f1",
     "https://StefanoNotaro.github.io/Profile/assets/icons/icon-152x152.png": "6e35e3c51100806dbcd516a51bb4adbac6d1163c",
     "https://StefanoNotaro.github.io/Profile/assets/icons/icon-192x192.png": "72ec1695ada321a0a835663ce3de49d5c1e674fc",
     "https://StefanoNotaro.github.io/Profile/assets/icons/icon-384x384.png": "05240519c530220999c0259ca5c329848e7a6e4e",
