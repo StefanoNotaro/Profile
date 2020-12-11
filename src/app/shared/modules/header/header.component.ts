@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
     public menues = [
         { path: 'GitHubHome', displayName: 'GitHub' },
-        { path: 'About', displayName: 'Sobre Mí' },
+        // { path: 'About', displayName: 'Sobre Mí' },
     ];
 
     constructor(public _translateService: TranslateService, public _globals: Globals) {
