@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1618509763531,
+  "timestamp": 1618510296897,
   "index": "https://StefanoNotaro.github.io/Profile/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://StefanoNotaro.github.io/Profile/favicon.ico",
         "https://StefanoNotaro.github.io/Profile/index.html",
-        "https://StefanoNotaro.github.io/Profile/main-es2015.e5760b708582f674c570.js",
-        "https://StefanoNotaro.github.io/Profile/main-es5.e5760b708582f674c570.js",
+        "https://StefanoNotaro.github.io/Profile/main-es2015.1cba4b480a814fb404b8.js",
+        "https://StefanoNotaro.github.io/Profile/main-es5.1cba4b480a814fb404b8.js",
         "https://StefanoNotaro.github.io/Profile/manifest.webmanifest",
         "https://StefanoNotaro.github.io/Profile/polyfills-es2015.833fec98dca74639f6a6.js",
         "https://StefanoNotaro.github.io/Profile/polyfills-es5.eeac35778857cdfd5291.js",
@@ -154,9 +154,9 @@
     "https://StefanoNotaro.github.io/Profile/fa-solid-900.8e1ed89b6ccb8ce41faf.woff2": "9b592048b9062b00f0b2dd782d70a95b7dc69b83",
     "https://StefanoNotaro.github.io/Profile/favicon.ico": "0467f607c265c6218b507c4d3e796bd2959f4f1d",
     "https://StefanoNotaro.github.io/Profile/header-image.0ad089c9603c0d89ff97.png": "8f276d207f09ef3073135c5803988222d768ead1",
-    "https://StefanoNotaro.github.io/Profile/index.html": "7d5de85b378c2748184f918645b2553695e57400",
-    "https://StefanoNotaro.github.io/Profile/main-es2015.e5760b708582f674c570.js": "cd63aaa2f409ce0a676c0ce5152a8c255d60f21a",
-    "https://StefanoNotaro.github.io/Profile/main-es5.e5760b708582f674c570.js": "af613637ab6aa3a1e5dd13622815efd29154071a",
+    "https://StefanoNotaro.github.io/Profile/index.html": "3bd01f7af9ac7d275c51b58c4daa9a205cd0bcdd",
+    "https://StefanoNotaro.github.io/Profile/main-es2015.1cba4b480a814fb404b8.js": "1ec3941a147c7acbc4118ea5fdf396928bf567d1",
+    "https://StefanoNotaro.github.io/Profile/main-es5.1cba4b480a814fb404b8.js": "3096ba86590874a1bbb90b8dd90c034f1e5c06e2",
     "https://StefanoNotaro.github.io/Profile/manifest.webmanifest": "69b45eeb07c1646dc2b67c6b0a48c47792d93537",
     "https://StefanoNotaro.github.io/Profile/polyfills-es2015.833fec98dca74639f6a6.js": "e1439e37daef386ffa09f61e25380b6cd2e84f48",
     "https://StefanoNotaro.github.io/Profile/polyfills-es5.eeac35778857cdfd5291.js": "d3476795b631463a5519ea8c22bd8f504f13824f",
